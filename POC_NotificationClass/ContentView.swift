@@ -11,7 +11,7 @@ struct ContentView: View {
     @StateObject private var notificationManager = NotificationManager()
     
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
             HStack {
                 Text("Notificação recebida:")
                     .bold()
@@ -21,11 +21,16 @@ struct ContentView: View {
                     .frame(width: 35, height: 35)
             }
             PostButton(color: .red)
+                
             PostButton(color: .green)
-            
         }
+        .onReceive(NotificationCenter.default.publisher(for: .showMessage), perform: { notification in
+                    if let buttonColor = notification.userInfo?["buttonColor"] as? Color {
+                        print(buttonColor)
+                    }
+                })
     }
-}
+        }
 
 struct PostButton: View {
     var color: Color
