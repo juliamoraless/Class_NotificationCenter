@@ -20,17 +20,11 @@ struct ContentView: View {
                     .fill(notificationManager.receivedColor ?? .gray)
                     .frame(width: 35, height: 35)
             }
-            PostButton(color: .red)
-                
+            PostButton(color: .red)       
             PostButton(color: .green)
         }
-        .onReceive(NotificationCenter.default.publisher(for: .showMessage), perform: { notification in
-                    if let buttonColor = notification.userInfo?["buttonColor"] as? Color {
-                        print(buttonColor)
-                    }
-                })
     }
-        }
+}
 
 struct PostButton: View {
     var color: Color
@@ -50,7 +44,7 @@ struct PostButton: View {
                             style: .continuous
                         )
                         .stroke(color, lineWidth: 3)
-                )
+                    )
             }
         }
     }
