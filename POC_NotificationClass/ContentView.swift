@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var notificationManager = NotificationManager()
+    @State var squareColor: Color = .gray
     
     var body: some View {
         VStack(spacing: 20) {
@@ -17,12 +17,17 @@ struct ContentView: View {
                     .bold()
                     .font(.title3)
                 RoundedRectangle(cornerRadius: 10)
-                    .fill(notificationManager.receivedColor ?? .gray)
+                    .fill(squareColor)
                     .frame(width: 35, height: 35)
             }
-            PostButton(color: .red)       
+            PostButton(color: .red)
             PostButton(color: .green)
         }
+        .onReceive(NotificationCenter.default.publisher(for: .showMessage), perform: { notification in
+            if let buttonColor = notification.userInfo?["buttonColor"] as? Color {
+                self.squareColor = buttonColor
+            }
+        })
     }
 }
 
@@ -44,7 +49,7 @@ struct PostButton: View {
                             style: .continuous
                         )
                         .stroke(color, lineWidth: 3)
-                    )
+                )
             }
         }
     }

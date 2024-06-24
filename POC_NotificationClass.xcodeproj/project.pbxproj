@@ -12,7 +12,6 @@
 		C8D9CABB2C04F872003D3D1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D9CABA2C04F872003D3D1A /* Assets.xcassets */; };
 		C8D9CABE2C04F872003D3D1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D9CABD2C04F872003D3D1A /* Preview Assets.xcassets */; };
 		C8D9CAC52C04FB41003D3D1A /* NotifcationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D9CAC42C04FB41003D3D1A /* NotifcationName.swift */; };
-		C8D9CAC72C0523E3003D3D1A /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D9CAC62C0523E3003D3D1A /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +21,6 @@
 		C8D9CABA2C04F872003D3D1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8D9CABD2C04F872003D3D1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C8D9CAC42C04FB41003D3D1A /* NotifcationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifcationName.swift; sourceTree = "<group>"; };
-		C8D9CAC62C0523E3003D3D1A /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +58,6 @@
 				C8D9CAC42C04FB41003D3D1A /* NotifcationName.swift */,
 				C8D9CABA2C04F872003D3D1A /* Assets.xcassets */,
 				C8D9CABC2C04F872003D3D1A /* Preview Content */,
-				C8D9CAC62C0523E3003D3D1A /* NotificationManager.swift */,
 			);
 			path = POC_NotificationClass;
 			sourceTree = "<group>";
@@ -145,7 +142,6 @@
 			files = (
 				C8D9CAB92C04F871003D3D1A /* ContentView.swift in Sources */,
 				C8D9CAC52C04FB41003D3D1A /* NotifcationName.swift in Sources */,
-				C8D9CAC72C0523E3003D3D1A /* NotificationManager.swift in Sources */,
 				C8D9CAB72C04F871003D3D1A /* POC_NotificationClassApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
